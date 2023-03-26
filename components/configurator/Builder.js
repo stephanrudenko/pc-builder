@@ -10,6 +10,7 @@ import PSU from "./PSU";
 import Selections from "./Selections";
 import TotalCost from "./TotalCost";
 import { useState } from "react";
+import ButtonAppBar from "../AppBar";
 
 const Builder = () => {
   const [cpu, setCpu] = useState(null);
@@ -26,6 +27,7 @@ const Builder = () => {
 
   return (
     <Container>
+      <ButtonAppBar />
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <CPU onSelect={setCpu} />
@@ -43,11 +45,9 @@ const Builder = () => {
             <Typography variant="h2" align="center">
               Computer Configurator
             </Typography>
-            {/* <Grid item xs={12}> */}
           </Paper>
         </Grid>
       </Grid>
-      {/* </Grid> */}
     </Container>
   );
 };
